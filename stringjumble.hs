@@ -25,4 +25,11 @@
     
 -}
 
-main = putStrLn "Put your program here!"
+main = do
+    putStrLn "Enter a sentence"
+    sentence <- getLine
+    putStrLn $ "You entered " ++ sentence ++ "."
+    putStrLn $ reverse sentence
+    putStrLn $ unwords $ reverse $ words sentence
+    putStrLn $ unwords $ reverse $ words $ reverse sentence
+    
